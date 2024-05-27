@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 2rem 14rem;
+}
+
+.column1 {
+    width: 50%;
+    text-align: left;
+}
+
+.column2 {
+    width: 50%;
+    text-align: right;
+    margin: auto;
+}
+
+/* Medium-sized screens (e.g. tablets) */
+@media only screen and (max-width: 1050px) {
+    .footer {
+        padding: 2rem 4rem;
+    }
+}
+  
+/* Smaller screens (e.g. mobile devices) */
+@media only screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+}

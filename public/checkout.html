@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <div class="headerDiv">
+        <header class="header">
+            <div>
+                <a href="./index.html" class="logo">WebDine</a>
+            </div>
+            <nav>
+                <ul class="list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./cart.html">🛒</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="marquee">
+            <div>
+                <span>💥 Dive into comfort classics 💥</span>
+                <span>💥 Savor the essence of Italy 💥</span>
+                <span>💥 Crisp, crunch, and freshness 💥</span>
+                <span>💥 Cheesy comfort on every plate 💥</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mainDiv">
+        <div class="formDiv">
+            <form class="form" action="../src/post_order.php" method="post">
+                <div class="fieldDiv">
+                    <div class="field">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="fieldDiv">
+                    <div class="field">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="field">
+                        <input type="tel" name="tel" id="tel" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="fieldDiv">
+                    <div class="field">
+                        <input type="text" name="street" id="street" placeholder="Street" required>
+                    </div>
+                    <div class="field">
+                        <input type="number" name="postalCode" id="postalCode" placeholder="Post Code" required>
+                    </div>
+                </div>
+
+                <div class="cityDiv">
+                    <input type="text" name="city" id="city" placeholder="City" required>
+                </div>
+
+                <input type="hidden" name="cart" id="cart">
+
+                <div class="buttonDiv">
+                    <button type="submit">Order</button>
+                </div>
+            </form>
+        </div>
+        <div class="orderDiv">
+            <div id="menu" class="items"></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div className="column1">
+            <h3>Footer text</h3>
+            <p>Footer text</p>
+            <p>Footer text</p>
+        </div>
+        <div class="column2">
+            <h1>WebDine</h1>
+        </div>
+    </div>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('header.css');
+@import url('footer.css');
+
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: black;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+body {
+    font-family: 'Notable', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    min-height: 100vh;
+}
+
+.mainDiv {
+    display: flex;
+    padding-bottom: 4rem;
+    max-width: 1800px;
+}
+
+.cartItemDiv {
+    min-width: 80%;
+}
+
+.checkoutButton {
+    text-align: right;
+    padding-right: 6rem;
+}
+
+.empty {
+    font-size: 2rem;
+    padding: 6rem 0rem;
+}
+
+/* Medium-sized screens (e.g. tablets) */
+@media only screen and (max-width: 1050px) {
+    .checkoutButton {
+        text-align: right;
+        padding-right: 2rem;
+    }
+}
+  
+/* Smaller screens (e.g. mobile devices) */
+@media only screen and (max-width: 600px) {
+    .cartItemDiv {
+        min-width: 100%;
+    }
+    .mainDiv {
+        padding-left: 2rem;
+    }
+}

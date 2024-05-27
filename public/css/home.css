@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('header.css');
+@import url('footer.css');
+
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: black;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+body {
+    font-family: 'Notable', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    min-height: 100vh;
+}
+
+.main-container {
+    padding: 6rem 10rem;
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.text-column {
+    width: 60%;
+    margin: auto;
+    padding: 0rem 4rem;
+    color: white;
+    text-align: left;
+}
+
+.text-column h1 {
+    font-size: 4rem;
+}
+
+.text-column p {
+    font-size: 30px;
+    padding-bottom: 4rem;
+}
+
+.image-column {
+    position: relative;
+    width: 40%;
+}
+
+.image-column img {
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+}
+
+.bubble {
+    position: absolute;
+    background-color: black;
+    color: white;
+    box-shadow: -10px -6px 0px white;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 6rem 3rem;
+    font-size: 30px;
+    bottom: 0.2vw;
+    right: 10px;
+}
+
+/* Medium-sized screens (e.g. tablets) */
+@media only screen and (max-width: 1050px) {
+    .main-container {
+        padding: 4rem 2rem;
+    }
+}
+  
+/* Smaller screens (e.g. mobile devices) */
+@media only screen and (max-width: 600px) {
+    .text-column {
+        padding-left: 0;
+        width: 70%;
+    }
+    .text-column h1 {
+        font-size: 2rem;
+    }
+    .text-column p {
+        font-size: 1rem;
+    }
+    .image-column {
+        visibility: hidden;
+    }
+    .bubble {
+        visibility: hidden;
+    }
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: -10px -6px 0px white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    font-family: 'Notable', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Medium-sized screens (e.g. tablets) */
+@media only screen and (max-width: 1050px) {
+    button {
+        font-size: 26px;
+    }
+}

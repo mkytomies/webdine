@@ -1,0 +1,102 @@
+.headerDiv {
+    background-color: black;
+    color: white;
+}
+    
+.header {
+    padding: 1rem 4rem;
+    max-width: 70rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+}
+  
+.list {
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+}
+  
+.list a {
+    text-decoration: none;
+    color: white;
+}
+  
+.list a:hover, .list a.active {
+    text-decoration: underline;
+}
+  
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.marquee {
+    background-color: white;
+    color: black;
+    height: 25px;
+    width: 100%;
+  
+    overflow: hidden;
+    position: relative;
+}
+  
+.marquee div {
+    display: block;
+    width: 120%;
+    height: 30px;
+  
+    position: absolute;
+    overflow: hidden;
+  
+    animation: marquee 20s linear infinite;
+}
+  
+.marquee span {
+    float: left;
+    width: 25%;
+}
+  
+@keyframes marquee {
+    0% { transform: translateX(75%); } 
+    100% { transform: translateX(-100%); }
+}
+
+/* Medium-sized screens (e.g. tablets) */
+@media only screen and (max-width: 1050px) {
+    .footer {
+        padding: 2rem 4rem;
+    }
+}
+  
+/* Smaller screens (e.g. mobile devices) */
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem 0rem;
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 2rem;
+    }
+    .header nav {
+        align-items: flex-end;
+    }
+    .logo {
+        font-size: 16px;
+    }
+        
+    .list {
+        display: flex;
+        gap: 1rem;
+        font-size: 14px;
+    }
+}
