@@ -16,7 +16,7 @@ fetch('../src/get_menu.php')
  .then(cartItems => {
     cart = getCart();
     const filteredItems = filterMenuItems(cartItems, cart);
-    displayCart(filteredItems);
+        displayCart(filteredItems);
  })
  .catch(error => {
     console.error("Error fetching menu items: ", error);
@@ -29,7 +29,7 @@ function filterMenuItems(cartItems, cart) {
 function displayCart(cartItems) {
     const cartDiv = document.getElementById('menu');
     cartItems.forEach(item => {
-        // Div for menu item
+        // Div for menu items
         const menuItem = document.createElement('div');
         menuItem.classList.add('item');
 
@@ -58,15 +58,6 @@ function displayCart(cartItems) {
         itemTextDiv.appendChild(itemName);
         itemTextDiv.appendChild(amount);
         itemTextDiv.appendChild(itemPrice);
-
-        // Function to update the amount in the paragraph
-        function updateAmount() {
-            const cart = getCart();
-            amount.textContent = cart[item.id] + "X";
-        }
-
-        // Initial update of the amount on page load
-        updateAmount();
 
         // Append image and text divs to the menuItem div 
         menuItem.appendChild(itemImageDiv);

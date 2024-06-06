@@ -18,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Something went wrong: " . mysqli_error($conn);
     }
-    // Redirect to checkout page
-    echo "<script>window.location.href = '../public/index.html';</script>";
+    echo '<script>
+        alert("Order accepted!");
+        window.location.href = "../public/index.html";
+        </script>';
 }
 ?>
